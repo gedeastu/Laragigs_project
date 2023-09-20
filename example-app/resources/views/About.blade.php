@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite('resources/css/app.css')
-    <title>About</title>
-</head>
-<body>
-    <h1>Halaman About</h1>
-    <h3>Gede Astu Nugraha</h3>
-    <img src="img/myPict-transformed.png" alt="" class="w-40">
-</body>
-</html>
+@extends('layouts.Root')
+@section('container')
+<h1>Halaman About</h1>
+{{$username}}
+<img src='img/{{$image}}' alt="" class="w-40">
+@endsection
