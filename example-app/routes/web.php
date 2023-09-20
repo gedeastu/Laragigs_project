@@ -29,7 +29,7 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/portfolio', function () {
+Route::get('/portfolios', function () {
     $username = "Gede Astu Nugraha";
     $portfolios = [
         [
@@ -60,7 +60,7 @@ Route::get('/portfolio', function () {
     ]);
 });
 
-Route::get('Portfolios/{Slug}',function($Slug){
+Route::get('portfolios/{Slug}',function($Slug){
     $username = "Gede Astu Nugraha";
     $portfolios = [
         [

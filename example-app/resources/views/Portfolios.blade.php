@@ -3,7 +3,7 @@
 <h1 class="py-5">Halaman Portfolio</h1>
 <div class="flex flex-col px-5 gap-5 sm:flex-row">
     @foreach ($Portfolios as $Portfolio)
-    <a href="/Portfolios/{{$Portfolio["Slug"]}}" class="flex flex-col items-center">
+    <a href="/portfolios/{{$Portfolio["Slug"]}}" class="flex flex-col items-center">
     <div class="text-center">
     <h2>{{$Portfolio["Title"]}}</h2>
     <h3>{{$Portfolio["Developher"]}}</h3>
