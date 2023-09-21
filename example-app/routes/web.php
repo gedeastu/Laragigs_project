@@ -1,6 +1,9 @@
 <?php
 
+
+use App\Models\Datas;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +20,44 @@ Route::get('/', function () {
     return view('Home',[
         'Title' => 'Home',
         'Name' => 'User',
+        'Datas' => Datas::all()
     ]);
 });
+
+// Route::get('/{Slug}', function($Slug){
+//     $Datas = [
+//         [
+//             'Title' => 'Joke Father',
+//             'Slug' => 'joke-father',
+//             'Desc' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolores distinctio veritatis ullam. Inventore repellat explicabo nisi, nobis corporis hic fugiat ipsa velit perferendis error quibusdam et ab distinctio sit!'
+//         ],
+//         [
+//             'Title' => 'Joke People',
+//             'Slug' => 'joke-people',
+//             'Desc' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolores distinctio veritatis ullam. Inventore repellat explicabo nisi, nobis corporis hic fugiat ipsa velit perferendis error quibusdam et ab distinctio sit!'
+//         ],
+//         [
+//             'Title' => 'Joke Friends',
+//             'Slug' => 'joke-friends',
+//             'Desc' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolores distinctio veritatis ullam. Inventore repellat explicabo nisi, nobis corporis hic fugiat ipsa velit perferendis error quibusdam et ab distinctio sit!'
+//         ],
+//         [
+//             'Title' => 'Joke Mother',
+//             'Slug' => 'joke-mother',
+//             'Desc' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolores distinctio veritatis ullam. Inventore repellat explicabo nisi, nobis corporis hic fugiat ipsa velit perferendis error quibusdam et ab distinctio sit!'
+//         ],
+//     ];
+//     $Datas_item = [];
+//     foreach($Datas as $Data){
+//       if ($Data['Slug'] === $Slug) {
+//             $Datas_item = $Data;
+//       }
+//     };
+//     return view('Data',[
+//         'Title' => 'Data Item',
+//         'Datas' => $Datas_item,
+//     ]);
+// });
 
 Route::get('/about', function () {
     return view('About',[
